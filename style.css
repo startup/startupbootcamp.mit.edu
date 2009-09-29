@@ -1,0 +1,110 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+#highlight {
+	color: #000000;
+	background-color: #FFFF66;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #000000;
+	width:900px;
+	margin: 0px auto;
+}
+
+
+a:link, a:visited {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #000000;
+	background-color: #ffff66;
+}
+
+#topbar {
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.buttons {
+	float: right;
+}
+
+.nav ul {
+	list-style-type: none;
+	float: left;
+}
+
+.nav li{
+	display: inline;
+	margin-right: 10px;
+	display: inline;
+	float: left;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 6em;
+	line-height: .9em;
+}	
+
+
+#bam {
+
+	margin-top: 30px;
+	line-height: 1.2em;
+	padding-bottom: 50px;
+
+/*
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+*/
+}
+
+#bambox {
+
+	margin-top: 30px;
+	line-height: 1.2em;
+
+
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+
+}
+
+#bam p{
+	margin: 10px;
+	margin-bottom: 15px;
+}
+
+#speakerdesc {
+	font-size: .8em;
+	line-height: 1.8em;
+
+}
+
+.slide1 img {
+	padding: 15px;
+}
+
+
+#infobox {
+	margin-top: 15px;
+	padding-bottom: 50px;
+}
+
+#infobox a:hover{
+	text-decoration: underline;
+}
