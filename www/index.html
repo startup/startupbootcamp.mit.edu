@@ -7,30 +7,51 @@
 		<title>Startup Bootcamp</title>
 		<link href="style.css" type="text/css" rel="stylesheet" />
 		<link rel="shortcut icon" href="favicon.gif" />
+		<script type="text/javascript">
+			function iPhoneAlert() {
+				if((navigator.userAgent.match(/iPhone/i))||(navigator.userAgent.match(/iPod/i))){
+						window.location = "http://startupbootcamp.mit.edu/m";}
+			}
+		</script>
 	</head>
-	<body>
+	<body onLoad="iPhoneAlert();">
 		<div id="topbar">
 			<div class="buttons">
 				<a href="http://twitter.com/home?status=Startup Bootcamp at MIT http://startupbootcamp.mit.edu %23sb"target="_blank"><img src="images/twitter.png" alt="Tweet us"</a>
-				<a href="http://www.facebook.com/event.php?eid=72621224943&index=1"><img src="images/facebook.png" alt="Add our event on Facebook"/></a>
-			</div>
-			<p>Startup Bootcamp is at <strong>9:00am</strong> on <strong>October 12, 2009</strong> at <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=77+Mass+Ave,+Cambridge,+MA+02139&sll=42.357624,-71.093988&sspn=0.008578,0.016973&ie=UTF8&ll=42.360256,-71.093473&spn=0.008578,0.016973&t=h&z=16&iwloc=A&iwstate1=dir">Kresge Auditorium, MIT</a>.
+				<a href="http://www.facebook.com/ajax/share_dialog.php?s=7&appid=2344061033&p[]=72621224943"><img src="images/facebook.png" alt="Add our event on Facebook"/></a>
+			</div>			<p>Startup Bootcamp was on <strong>October 12th</strong> at <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=77+Mass+Ave,+Cambridge,+MA+02139&sll=42.357624,-71.093988&sspn=0.008578,0.016973&ie=UTF8&ll=42.360256,-71.093473&spn=0.008578,0.016973&t=h&z=16&iwloc=A&iwstate1=dir">Kresge Auditorium, MIT</a>.
 			</p>
 			<div class="nav">
 				<ul>
 					<li><a href="index.html" style="border-bottom: solid 3px #000000;">Main</a></li>
-					<li><a href="reg.html">Registration</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
 					<li><a href="speakers.html">Speakers</a></li>
-					<li><a href="mailto:grinich@mit.edu?subject=[Startup Bootcamp]">Contact</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li><a href="peacock.html">The Peacock</a></li>
+					<li><a href="mailto:startupbootcamp@mit.edu?subject=[Startup Bootcamp]">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="title">
 			<span id="highlight">Startup Bootcamp</span>
 		</div>
-		<div id="bambox">
-			<img src="images/logos.jpg">
+		<div id=stream></div>
+
+<object type="application/x-shockwave-flash" height="350" width="600" id="jtv_player_flash" data="http://www.justin.tv/widgets/jtv_player.swf?channel=officecam" bgcolor="#000000">
+
+		<param name="allowFullScreen" value="true" />
+		<param name="allowScriptAccess" value="always" />
+
+		<param name="allowNetworking" value="all" />
+
+		<param name="movie" value="http://www.justin.tv/widgets/jtv_player.swf" />
+
+		<param name="flashvars" value="channel=startupbootcamp&auto_play=fall&start_volume=25" />
+
+
+</object>
 		</div>
+
 		<div id="infobox">
 			<p>Have an idea? Starting a company is easier than you think. </p>
 			<br/>
@@ -45,10 +66,9 @@
 				<a href="/speakers.html" style="text-decoration:none;">more</a>.
 			</p>
 			<br/>
-			The event is free and open to all, but you must <a href="./reg.html"><span id="highlight">register</span></a> to attend.
-			<br/>
 			<br/>
 		</div>
+
 	</body>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

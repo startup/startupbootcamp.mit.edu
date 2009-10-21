@@ -9,6 +9,11 @@
 	background-color: #FFFF66;
 }
 
+img {
+	border: none;
+}
+
+
 body {
 	background-color: #FFFFFF;
 	font-family: Helvetica, Arial, sans-serif;
@@ -29,6 +34,7 @@ a:link, a:visited {
 a:hover {
 	color: #000000;
 	background-color: #ffff66;
+	text-decoration: none;
 }
 
 #topbar {
@@ -41,6 +47,7 @@ a:hover {
 }
 
 .nav ul {
+	bottom: -1px;
 	list-style-type: none;
 	float: left;
 }
@@ -53,34 +60,95 @@ a:hover {
 }
 
 .title {
+	line-height: .9em;
 	font-weight: bold;
 	font-size: 6em;
-	line-height: .9em;
 }	
 
+.ok {
+	text-align: center;
+	line-height: .9em;
+	font-weight: bold;
+	font-size: 6em;
+}
+
+.signedup {
+	text-align: center;
+	font-weight: bold;
+}
 
 #bam {
 
 	margin-top: 30px;
 	line-height: 1.2em;
 	padding-bottom: 50px;
+}
 
-/*
-	border-color: black;
-	border-width: 3px;
-	border-style: solid;
-*/
+#bam ul{
+	list-style: none;
+}
+
+#bam li{
+	float:left;
+	display: inline;
+	padding-right: 45px;
+	padding-bottom: 10px;
+	padding-top: 15px;
+}
+
+
+#bam p{
+	display: inline;
+}
+
+#org {
+
+	margin-top: 30px;
+	line-height: 1.2em;
+	padding-bottom: 50px;
+}
+
+.thanks{
+	float: left;
+	width: 800px;
+	height: 30px;
+}
+
+.us {
+	float: left;
+	text-align: left;
+	width: 350px;
+	height: 200px;
+}
+
+.us p{
+	width: 190px;
+	float: right;
+	text-align: left;
+}
+
+#theForm {
+	font-size: .8em;
 }
 
 #bambox {
 
 	margin-top: 30px;
 	line-height: 1.2em;
-
-
 	border-color: black;
 	border-width: 3px;
 	border-style: solid;
+
+}
+
+#tweetbox {
+
+	margin-top: 30px;
+	line-height: 1.2em;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+	margin-bottom: 50px;
 
 }
 
@@ -105,6 +173,21 @@ a:hover {
 	padding-bottom: 50px;
 }
 
-#infobox a:hover{
-	text-decoration: underline;
+
+#spons {
+
+	text-align: center;
+	margin-top: 30px;
+	line-height: 1.2em;
+	border-color: black;
+	border-width: 3px;
+	border-style: solid;
+}
+
+#spons a:hover{
+	background: none;
+}
+
+#stream{
+	margin-top: 30px;
 }

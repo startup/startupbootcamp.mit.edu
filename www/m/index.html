@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Startup Bootcamp</title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript"> google.load("jquery", "1.3.2"); </script>
+    <script src="jqtouch/jqtouch.min.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="jquery.jtwitter.js" type="application/x-javascript" charset="utf-8"></script>
+    <style type="text/css" media="screen">@import "jqtouch/jqtouch.min.css";</style>
+    <style type="text/css" media="screen">@import "themes/startup/theme.css";</style>
+    <script type="text/javascript" charset="utf-8">
+      var jQT = new $.jQTouch({
+      icon: 'sb_icon.png',
+      addGlossToIcon: true,
+      startupScreen: 'sb_startup.png',
+      statusBar: 'black',
+      preloadImages: [
+      'themes/startup/img/back_button.png',
+      'themes/startup/img/back_button_clicked.png',
+      'themes/startup/img/button_clicked.png',
+      'themes/startup/img/grayButton.png',
+      'themes/startup/img/whiteButton.png',
+      'themes/startup/img/loading.gif'
+      ]
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $.fn.jTwitter.defaults.username = 'StartupBootcamp';
+      $.fn.jTwitter.defaults.term = 'StartupBootcamp #sb';
+      $.fn.jTwitter.defaults.showDate = false;
+      $.fn.jTwitter.defaults.limit = 30;
+      $.fn.jTwitter.defaults.showSource = false;
+      $.fn.jTwitter.defaults.showOriginal = true;
+      $.fn.jTwitter.defaults.useFullName = true;
+      $('#tweets').jTwitter({limit:1});
+      $('#tweets').jTwitterSearch();
+      $('.jtwitter').addClass("metal");
+      });
+    </script>
+  </head>
+  <body>
+      <div id="about" class="selectable">
+        <p><img src="sb_icon.png" /></p>
+        <p><strong>Startup Bootcamp (iPhone)</strong><br />Version 1.0<br />
+          <a href="http://jeffd.org">By Jeff Dlouhy</a></p>
+        <p><em>I've got blisters on me fingers!</em></p>
+        <p>
+          <a href="http://twitter.com/dlouhy" target="_blank">@dlouhy on Twitter</a>
+        </p>
+        <p><br /><br /><a href="#" class="grayButton goback">Close</a></p>
+      </div>
+
+    <div id="speakers">
+      <div class="toolbar">
+        <h1>Speaker Schedule</h1>
+        <a class="back" href="#home">Home</a>
+      </div>
+      <ul class="edgetoedge">
+        <li class="sep">9:00 am &ndash; 10:30 am</li>
+        <li><a href="#adamsmith">Adam Smith</a></li>
+        <li><a href="#alexisohanian">Alexis Ohanian</a></li>
+        <li><a href="#kenzolot">Ken Zolot</a></li>
+        <li class="sep">10:30 am &ndash; 11:00 m</li>
+        <li><a href="#" target="_blank">Break</a></li>
+        <li class="sep">11:00 am &ndash; 12:30 pm</li>
+        <li><a href="#dantheobald">Dan Theobald</a></li>
+        <li><a href="#kylevogt">Kyle Vogt</a></li>
+        <li><a href="#angusdavis">Angus Davis</a></li>
+         <li class="sep">12:30 pm &ndash; 2:00 pm</li>
+        <li><a href="#" target="_blank">Lunch</a></li>
+        <li class="sep">2:00 pm &ndash; 3:30 pm</li>
+        <li><a href="#hemanttaneja">Hemant Taneja</a></li>
+        <li><a href="#dharmeshshah">Dharmesh Shah</a></li>
+        <li><a href="#robinchase">Robin Chase</a></li>
+        <li class="sep">3:30 pm &ndash; 4:00 pm</li>
+        <li><a href="#" target="_blank">Break</a></li>
+        <li class="sep">4:00 pm &ndash; 5:30 pm</li>
+        <li><a href="#danbricklin">Dan Bricklin</a></li>
+        <li><a href="#aaronswartz">Aaron Swartz</a></li>
+        <li><a href="#drewhouston">Drew Houston</a></li>
+      </ul>
+    </div>
+
+    <div id="adamsmith">
+      <div class="toolbar">
+        <h1>Adam Smith</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/smith2.jpg" alt="Adam Smith"/><br/>
+	  <a href="http://blog.adamsmith.cc/" target="_blank">Adam Smith</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://www.xobni.com/" target="_blank">Xobni</a></span>
+        </div>
+        <div class="bio">
+          <p>Adam Smith is the founder of a startup called Xobni. Xobni is the word 'inbox' spelled backwards. They make email software that makes it easier for people to manage relationships and find information in their email. Their product has received a lot of attention from the tech community, including people like Bill Gates. If you use Outlook you should give it a spin!</p>
+          <p>Adam began writing and selling software online in the same year at age thirteen through a company he created called Vira Tech Development.</p>
+          <p>After graduating from MIT with his bachelors he started a master's program and later dropped out to start Xobni. Adam ran Xobni as CEO for two years and now is the CTO and a member of it's technical staff.</p>
+          <p>He was recently included in the MIT Technology Review's list of Top 35 Innovators Under 35, and Inc Magazine's Top 30 Entrepreneurs Under 30.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="kenzolot">
+      <div class="toolbar">
+        <h1>Ken Zolot</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/zolot.jpg" alt="Ken Zolot"/><br/>
+	  <a href="http://www.mit.edu/people/zolot/home.html" target="_blank">Ken Zolot</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://entrepreneurship.mit.edu/" target="_blank">MIT Innovation Teams</a><br/> Founder, Heartland Robotics</span>
+        </div>
+        <div class="bio">
+          <p>Ken Zolot founded MIT's <a href="http://iteams.mit.edu">Innovation Teams</a> program, where  multidisciplinary teams of students collaborate with MIT lab  directors, evaluating go-to-market strategies for breakthrough  discoveries.  I-Teams is a partnership with MIT's Deshpande Center  for Technological Innovation. Ken also co-teaches the X-PrizeLab class at MIT, in partnership with <a href="http://www.xprize.org/">The X-Prize Foundation</a>. In 2009, Ken was named a Senior Fellow at the <a href="http://www.kauffman.org/about-foundation/ken-zolot.aspx">Ewing Marion Kauffman Foundation</a>, to advise the Foundation on its new initiative &quot;Kauffman Labs for Enterprise Creation&quot;. </p>
+          <p>Ken's teaching and mentoring have  guided numerous MIT-spawned companies, including A123 Systems, <span class="facultycopy" style="vertical-align: top;"><span class="facultycopy" style="vertical-align: top;">Arch Therapeutics</span>, </span>Brontes3D, HubSpot, Myomo, <span class="facultycopy" style="vertical-align: top;"><span class="facultycopy" style="vertical-align: top;">QD  Vision</span>, Robopsy, Saaf Water</span>,  Semprus Biosciences (fka SteriCoat), <span class="facultycopy" style="vertical-align: top;">Vertica Systems,</span> and Visible Measures. </p>
+          <p>In  addition to his work at MIT, Ken has held full-time founding roles in several startups, most recently Heartland Robotics, which  Ken co-founded in 2008 with Rod Brooks, former Chief Technology  Officer of iRobot and Director of MIT's Artificial Intelligence Laboratory. In 2000, Ken co-founded Egenera, Inc., along with Goldman Sachs' Chief Technology Officer Vern Brownell. Egenera was named to Red Herring's  list of &quot;100 companies most likely to change the world&quot;. Ken's  previous startup, Geer Zolot Associates, was a spinoff from MIT  Project Athena. Geer Zolot developed network security software for  electronic trading and commerce, and designed the Internet security  architecture for much of the financial services industry. After the  sale of Geer Zolot Associates, Ken was retained by Goldman Sachs to  guide its technology strategy. Ken has also held positions at MIT  Project Athena, and at Digital Equipment Corporation's Innovative  Technology Research Center in Cambridge. Zolot's first start-up was  Spectra Communications, specializing in satellite telecommunications. </p>
+          <p>Ken serves on the global Board of the MIT Enterprise Forum, and <span class="facultycopy" style="vertical-align: top;"> is an active advisor to numerous organizations involved in advancing entrepreneurship, including TechStars, Youth CITIES, and  Common Angels. He served on the founding team of  the MIT Portugal Program, and launched Portugal's BioEngineering Innovation program. Ken served as a Research Scientist at the MIT Media Lab, and was instrumental in the creation of the Center for the Future of Banking. </span>Ken also served as a director of Yoga301, which focused on advancing  the art, science, and practice of the timeless discipline of yoga. </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="alexisohanian">
+      <div class="toolbar">
+        <h1>Alexis Ohanian</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/ohanian.jpg" alt="Alexis Ohanian"/>
+	  <a href="http://alexisohanian.com/" target="_blank">Alexis Ohanian</a><br/>
+	  <span id="speakerdesc">Co-Founder, <a href="http://www.reddit.com" target="_blank">Reddit</a></span>
+        </div>
+        <div class="bio">
+          <p>After graduating from the University of Virginia in June 2005, Alexis Ohanian started reddit.com with Steve Huffman. In October of 2006, their company was acquired by Condé Nast, where he is now a product manager. Along with managing product, he also doodles the reddit mascot. A social news website, reddit lets readers - not editors - decide what goes on the front page by simply voting content up or down. The model has proved popular thus far, as over 4.6 million people visit reddit a month.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="dantheobald">
+      <div class="toolbar">
+        <h1>Dan Theobald</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/theobald.jpg" alt="Dan Theobald"/><br/>
+	  <a href="http://www.vecna.com/about_us/team_members.shtml#daniel" target="_blank">Dan Theobald</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://www.vecna.com/" target="_blank">Vecna</a></span>
+        </div>
+        <div class="bio">
+          <p>The inventor of the BEAR™, Daniel is well versed in the engineering sciences with extensive experience in software architecture, artificial intelligence (AI), electromechanical engineering and mobile robotics. His interests and expertise include robot control and mobility systems, object-oriented design, enterprise system architecture, and system integration. His graduate work at the MIT AI Laboratory included developing web-based control algorithms for a robotic Mars explorer, a progenitor of Spirit and Opportunity. Graduating at the top of his class at MIT, Daniel is the recipient of the Henry Ford II Scholar Award and the Hertz Foundation Award, as well as a fellowship from the National Science Foundation. Daniel holds BS and MS degrees in Mechanical Engineering from MIT.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="kylevogt">
+      <div class="toolbar">
+        <h1>Kyle Vogt</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/vogt.jpg" alt="Kyle Vogt"/><br/>
+	  <a href="http://web.mit.edu/kvogt/www/justintv.html" target="_blank">Kyle Vogt</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://www.justin.tv/" target="_blank">Justin.TV</a></span>
+        </div>
+        <div class="bio">
+          <p>During November of 2006, Kyle joined up Justin Kan, Emmett Shear, and Michael Seibel to start a company called Justin.tv. The concept was pretty simple - build a website that features a live video feed of Justin's life. We did it, and it was wildly successful. Over 2.5 million people tuned in to watch Justin's during our first month of operation. They are currently turning Justin.tv into a platform so that anyone can have their own Justin.tv.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="angusdavis">
+      <div class="toolbar">
+        <h1>Angus Davis</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/davis.jpg" alt="Angus Davis"/><br/>
+          <a href="http://angusdavis.com/" target="_blank">Angus Davis</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://en.wikipedia.org/wiki/Tellme_Networks" target="_blank">Tellme</a></span>
+        </div>
+        <div class="bio">
+          <p>Angus co-founded Tellme, a prominent Silicon Valley technology firm that grew a profitable business to more than $100 million in sales and over 300 employees with $238 million in backing from Kleiner Perkins and Benchmark Capital, among other investors. In 2007, Microsoft acquired Tellme in its largest-ever acquisition of a private company. Angus subsequently guided speech recognition product strategy across Microsoft for two years before leaving in 2009 to explore new opportunities.</p>
+          <p>Prior to Tellme, Angus joined Netscape Communications in 1996, bypassing college to become the company's youngest employee at age 18. At Netscape, Angus worked in the office of the CTO and later he was product manager for the flagship Web browser and the Web rendering engine known as “Gecko.” In an ironic twist, he played a key role in the anti-trust suit against Microsoft. He participated in the AOL/Netscape merger and in establishing Mozilla.org, one of the first commercial forays into open source software.</p>
+          <p>Angus has addressed numerous industry conferences on technology and business. He has spoken on entrepreneurship at Stanford, Harvard, Berkeley and Brown University, among others, and he has appeared in every major US business and technology media outlet, including CNBC, Wall Street Journal, New York Times, BusinessWeek, C|Net and others. In 2006 BusinessWeek named him one of the top ten entrepreneurs under age 30.</p>
+          <p>A New England native, Angus visits Silicon Valley often but now calls Providence, RI home. Outside business, his passion is improving K-12 public education. In 2007, Rhode Island’s Governor appointed Angus to the Board of Regents, the state’s chief education policy body. In just two years, Angus led a major expansion of the charter school law and passed regulations to allow new teacher programs like Teach for America. Angus recruited a nationally acclaimed leader to become Rhode Island’s Commissioner of Education, replacing a 17-year incumbent. Motivating this work is Angus’ goal to close the achievement gap, as Rhode Island’s Latino-White gap is the largest in the nation and not a single urban district middle school in the state has even half its students performing at grade level in any subject measured (reading, writing or mathematics).</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="hemanttaneja">
+      <div class="toolbar">
+        <h1>Hemant Taneja</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/hemant.jpg" alt="Hemant Taneja"/><br/>
+	  <a href="http://www.generalcatalyst.com/team/hemant_taneja" target="_blank">Hemant Taneja</a><br/>
+	  <span id="speakerdesc">Managing Director, <a href="http://www.generalcatalyst.com/" target="_blank"><br/>General Catalyst Partners</a><br/> Founder, <a href="http://sunborneenergy.com">Sunborne Energy</a></span>
+        </div>
+        <div class="bio">
+          <p>As a Managing Director of General Catalyst Partners, Hemant invests in technology-intensive software, hardware and services in clean energy and internet communications. He is a Board member of <a href="http://www.generalcatalyst.com/portfolio/humedica">Humedica</a>, <a href="http://www.hunch.com" target="_blank">Hunch</a>, <a href="../../../portfolio/lumenz">Lumenz</a>,&nbsp; <a href="../../../portfolio/mascoma">Mascoma</a>, <a href="http://generalcatalyst.com/portfolio/modular-wind">Modular Wind</a>, <a href="../../../portfolio/sand">Sand9</a> and <a href="../../../portfolio/stion">Stion</a>. </p><p>Hemant is also the co-founder and Chairman of Sunborne Energy, a General Catalyst portfolio company that is focused on commercializing utility scale solar power in India. <br /></p><p>Previously, Hemant also served on the Board of <a href="../../../portfolio/siteadvisor">SiteAdvisor</a>, a General Catalyst investment that was acquired by McAfee (<a href="http://www.mcafee.com/us/">MFE</a>) in April 2006. Before joining General Catalyst in 2002, Hemant was co-founder, Chairman and CEO of Isovia, a Boston-based mobile software and applications company that was acquired by JP Mobile (<a href="http://www.motorola.com/us" target="_blank">MOT</a>) in 2001.</p><p>Hemant is the co-founder &amp; Chairman of the New England Clean Energy Council (<a href="http://www.necec.org/">NECEC.org</a>), a non-profit, focused on advancing New England&#39;s clean energy economy to global leadership. The U.S. Department of Energy presented the Energy Innovator Award to the Council in 2008 for its successful execution.</p><p>Hemant is also on the Board of Directors of the <a href="http://www.masscec.com/" target="_blank">Massachusetts Clean Energy Center</a>, a quasi-public agency, The Indus Entrepreneurs (<a href="http://www.tie-boston.org/">TiE</a>), a non-profit organization focused on helping entrepreneurs, and the <a href="http://www.greenlightfund.com/">GreenLight Fund</a>, which catalyzes the replication and growth of innovative non-profits.<br /><br />Hemant holds an M.S. in Operations Research, an M.Eng. in Electrical Engineering &amp; Computer Science, a B.S. in Mathematics, a B.S. in Electrical Engineering &amp; Computer Science, and a B.S. in Biology &amp; Biomedical Engineering; all from the <a href="http://www.mit.edu/">Massachusetts Institute of Technology</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="dharmeshshah">
+      <div class="toolbar">
+        <h1>Dharmesh Shah</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/dharmesh.jpg" alt="Dharmesh Shah"/><br/>
+	  <a href="http://onstartups.com/About/AboutDharmeshShah/tabid/4147/Default.aspx" target="_blank">Dharmesh Shah</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://www.hubspot.com" target="_blank">HubSpot</a> <br/>Author, <a href="http://www.onstartups.com" target="_blank">OnStartups</a></span>
+        </div>
+        <div class="bio">
+          <p class="text">Dharmesh is a software entrepreneur and&nbsp;currently the co-founder and CEO of <a href="http://www.hubspot.com/" mce_href="http://www.hubspot.com/">HubSpot</a>,&nbsp;a software company building a revolutionary software platform for Internet Marketing .&nbsp; HubSpot is his third software startup.&nbsp;</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="robinchase">
+      <div class="toolbar">
+        <h1>Robin Chase</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/chase.jpg" alt="Robin Chase"/>
+	  <a href="http://en.wikipedia.org/wiki/Robin_Chase" target="_blank">Robin Chase</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://www.zipcar.com/" target="_blank">Zipcar</a></span>
+        </div>
+        <div class="bio">
+	  <p><b>Robin Chase</b> is the co-founder and former CEO of <a href="/wiki/Zipcar" title="Zipcar">Zipcar</a>, an innovative car sharing service, and is currently the CEO of <a href="/w/index.php?title=GoLoco.org&amp;action=edit&amp;redlink=1" class="new" title="GoLoco.org (page does not exist)">GoLoco.org</a>, a venture combining online <a href="/wiki/Carpool" title="Carpool">carpooling</a> and social networking. She is also founder of <a href="/w/index.php?title=Meadow_Networks&amp;action=edit&amp;redlink=1" class="new" title="Meadow Networks (page does not exist)">Meadow Networks</a>, a transportation consulting firm, and maintains a blog <a href="/w/index.php?title=Network_Musings&amp;action=edit&amp;redlink=1" class="new" title="Network Musings (page does not exist)">Network Musings</a> on the topics of climate change, transportation, and wireless networks.</p>
+          <p>Chase is known as a global thought leader in the transportation sector. Her work is an illustration of the ways in which resource sharing, open platforms, and end-user participation can prove beneficial to individuals, businesses, and governments. <a href="/wiki/Craig_Newmark" title="Craig Newmark">Craig Newmark</a> wrote "Robin's work illustrates what's best about people using the Internet: not well-intentioned yet futile do-goodism but business that's also a community service. It's about people using the Internet to work together in the service of one another."</p>
+          <p>Zipcar provides a platform for people to share cars; GoLoco, a platform to share rides. She is also a champion for the creation of a mesh network so that end-user devices can create a shared wireless network. She is a proponent of expanding internet access, participating in the InternetforEveryone kick-off event.</p>
+          <p>Chase is currently a Board member for the World Resources Institute. She has served on the Boston Mayor's Wireless Task Force, and Governor Deval Patrick's Transportation Transition Team. She has been frequently featured in the major media including the <i><a href="/wiki/Today_(NBC_program)" title="Today (NBC program)">Today Show</a></i>, <i>The <a href="/wiki/New_York_Times" title="New York Times" class="mw-redirect">New York Times</a></i>, <a href="/wiki/National_Public_Radio" title="National Public Radio">National Public Radio</a>, <i><a href="/wiki/Wired_(magazine)" title="Wired (magazine)">Wired</a></i>, <i><a href="/wiki/Newsweek" title="Newsweek">Newsweek</a></i> and <i><a href="/wiki/Time_magazine" title="Time magazine" class="mw-redirect">Time</a></i> magazines, as well as several books on entrepreneurship. She has received many honors and awards, including Time 100 Most Influential People, the Massachusetts Governor's Award for Entrepreneurial Spirit, Start-up Woman of the Year, <i><a href="/wiki/Business_Week" title="Business Week" class="mw-redirect">Business Week</a>’s</i> top 10 designers, <i><a href="/wiki/Fast_Company_(magazine)" title="Fast Company (magazine)">Fast Company</a>'s</i> Fast 50 Champions of Innovation, technology and innovation awards from <i>Fortune</i>, <i>CIO</i>, and <i><a href="/wiki/InfoWorld" title="InfoWorld">InfoWorld</a></i> magazines, and numerous environmental awards from national, state and local governments and organizations.</p>
+          <p>Chase graduated from <a href="/wiki/Wellesley_College" title="Wellesley College">Wellesley College</a> and <a href="/wiki/MIT" title="MIT" class="mw-redirect">MIT</a>’s <a href="/wiki/Sloan_School_of_Management" title="Sloan School of Management" class="mw-redirect">Sloan School of Management</a>, and won the competitive Loeb Fellowship at the <a href="/wiki/Harvard_Graduate_School_of_Design" title="Harvard Graduate School of Design">Harvard Graduate School of Design</a>.</p>
+          <p>Chase and her husband Roy Russell live in <a href="/wiki/Cambridge,_Massachusetts" title="Cambridge, Massachusetts">Cambridge, Massachusetts</a>, with their three children. Roy is the Chief Technology Officer of GoLoco and was Zipcar's founding CTO for 6.5 years.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="aaronswartz">
+      <div class="toolbar">
+        <h1>Aaron Swartz</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/swartz.jpg" alt="Aaron Swartz"/><br/>
+	  <a href="http://en.wikipedia.org/wiki/Aaron_Swartz" target="_blank">Aaron Swartz</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://infogami.com/blog/introduction" target="_blank">Infogami</a><br/> Author, <a href="http://www.aaronsw.com/weblog/" target="_blank">Raw Thought</a></span>
+        </div>
+        <div class="bio">
+          <p><b>Aaron Swartz</b> (born November 8, 1986) is a writer, activist, and programmer. He is currently co-founder of the <a href="/wiki/Progressive_Change_Campaign_Committee" title="Progressive Change Campaign Committee">Progressive Change Campaign Committee</a>.</p>
+          <p>At age 14, he was a co-author of the <a href="/wiki/RSS_(file_format)" title="RSS (file format)" class="mw-redirect">RSS</a> 1.0 specification. Since then he has become a member of the <a href="/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a>’s <a href="/wiki/Resource_Description_Framework" title="Resource Description Framework">RDF</a> Core Working Group, co-designed the formatting language <a href="/wiki/Markdown" title="Markdown">Markdown</a> with <a href="/wiki/John_Gruber" title="John Gruber">John Gruber</a>, and has been involved in many other projects.</p>
+          <p>Swartz was the founder of Infogami, a <a href="/wiki/Startup_company" title="Startup company">startup</a> that was part of <a href="/wiki/Y_Combinator" title="Y Combinator">Y Combinator</a>’s first Summer Founders Program. Previously, he attended <a href="/wiki/Stanford_University" title="Stanford University">Stanford University</a> for a year, leaving to work on his company full-time. Infogami merged with <a href="/wiki/Reddit" title="Reddit">reddit</a> to form <i>not a bug</i> but failed to take off.</p>
+          <p>In late 2006, reddit was sold to <a href="/wiki/Cond%C3%A9Net" title="CondéNet" class="mw-redirect">CondéNet</a> (the online arm of <a href="/wiki/Cond%C3%A9_Nast_Publications" title="Condé Nast Publications">Condé Nast Publications</a> and the owners of <i><a href="/wiki/Wired_(magazine)" title="Wired (magazine)">Wired</a></i>) and Swartz moved with his company to <a href="/wiki/San_Francisco" title="San Francisco">San Francisco</a>. In January 2007, Swartz was asked to resign from his position at Wired Digital.</p>
+          <p>In September 2007, Swartz, together with Simon Carstensen, launched Jottit, a website service quite similar to Infogami. Jottit was launched from bitbots.net, a project by Swartz and Carstensen. Swartz is also the creator of the <a href="/w/index.php?title=Web.py&amp;action=edit&amp;redlink=1" class="new" title="Web.py (page does not exist)">web.py</a> <a href="/wiki/Web_application_framework" title="Web application framework">web application framework</a>, based on the <a href="/wiki/Python_programming_language" title="Python programming language" class="mw-redirect">Python programming language</a>, which is used by Jottit (and previously reddit).</p>
+          <p>Swartz is an active blogger and has written a number of widely read essays on his <a href="/wiki/Blog" title="Blog">blog</a>. Two of his more well-known pieces are “Who Writes Wikipedia”, an article examining the contributions to Wikipedia articles written during his candidacy for the Wikimedia Foundation board election in 2006, and “HOWTO: Be More Productive”,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>3<span>]</span></a></sup> an article on personal productivity.</p>
+          <p>Swartz currently lives in <a href="/wiki/Cambridge,_Mass." title="Cambridge, Mass." class="mw-redirect">Cambridge, Mass.</a> He works on <a href="/wiki/Open_Library" title="Open Library">Open Library</a> and watchdog.net and is on the board of <a href="/wiki/Change_Congress" title="Change Congress">Change Congress</a>.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="drewhouston">
+      <div class="toolbar">
+        <h1>Drew Houston</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+          <img src="http://startupbootcamp.mit.edu/images/houston.jpg" alt="Drew Houston"/>
+	  <a href="http://www.getdropbox.com/about" target="_blank">Drew Houston</a><br/>
+	  <span id="speakerdesc">Founder, <a href="http://www.getdropbox.com" target="_blank">Dropbox</a></span>
+        </div>
+        <div class="bio">
+          <p>Drew graduated from MIT and wrote the first lines of code for Dropbox while at a train station in Boston. These days he's usually out and about running Dropbox's business affairs, but he still contributes a lot to Dropbox's client software. In the little free time he has, Drew can be found jamming on his guitar.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="danbricklin">
+      <div class="toolbar">
+        <h1>Dan Bricklin</h1>
+        <a class="back" href="#speakers">Speakers</a>
+      </div>
+      <div class="speaker">
+        <div class="geninfo">
+	  <img src="http://startupbootcamp.mit.edu/images/bricklin.jpg" alt="Dan Bricklin"/>
+	  <a href="http://en.wikipedia.org/wiki/Dan_Bricklin">Dan Bricklin</a><br/>
+	  <span id="speakerdesc">Creator of <a href="http://en.wikipedia.org/wiki/VisiCalc">VisiCalc</a></span>
+        </div>
+        <div class="bio">
+          <p>Dan Bricklin, with a BS in CS/EE and an MBA, is a software developer, entrepre- neur, and longtime blogger. He is best known for co-developing VisiCalc, the first PC spreadsheet program, and has continued developing a variety of products to this day, including many for the Internet.</p>
+          <p>Dan will tell us some of the history of that development, talk about where some of computer technology is going today, and take your questions. He brings lots of photos and some video to augment his talk.</p>
+          <p>VisiCalc was the first spreadsheet program available for personal computers. It may well be the application that turned the microcomputer from a hobby for computer enthusiasts into a serious business tool, making it the first 'killer app.' VisiCalc sold over 700,000 copies in six years.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="theForm">
+      <div class="toolbar">
+        <h1>Forms</h1>
+        <a href="#" class="back">Back</a>
+      </div>
+
+
+
+      <form action="http://michaelgrinich.createsend.com/t/r/s/tdkiki/" method="post">
+        <ul class="edit rounded">
+          <li><input type="text" name="cm-name" placeholder="Name" id="name" /></li>
+          <li><input type="text" name="cm-tdkiki-tdkiki" placeholder="E-Mail" id="tdkiki-tdkiki" /></li>
+
+          <li> <label for="Student?">Are you a student?</label></li>
+          <li>
+            <select name="cm-fo-eidx">
+              <option value="92915">Yes</option>
+              <option value="92916">No</option>
+            </select>
+          </li>
+
+
+          <li><label for="School and year">Where and what year?</label></li>
+          <li><textarea cols=40 rows=2 wrap=virtual  name="cm-f-eidm" id="Schoolandyear"></textarea></li>
+
+
+          <li><label for="Short bio">A bit about yourself and why you want to attend:</label></li>
+          <li><textarea cols=40 rows=8 wrap=virtual name="cm-f-eidc" id="Shortbio"></textarea></li>
+          <li><input type="submit" value="Register" /></li>
+        </ul>
+      </form>
+    </div>
+    <div id="twitter">
+      <div class="toolbar">
+        <h1>Twitter</h1>
+        <a class="back" href="#home">Home</a>
+      </div>
+      <div id="tweets" class="metal">
+      </div>
+    </div>
+
+    <div id="home" class="current">
+      <div class="toolbar">
+        <h1>Startup Bootcamp</h1>
+      </div>
+      <ul class="rounded">
+        <li class="arrow"><a href="#speakers">Speakers</a></li>
+        <li class="arrow"><a href="#theForm">Register</a></li>
+        <li class="arrow"><a href="#twitter">Tweets</a></li>
+      </ul>
+
+     <h2>External Links</h2>
+     <ul class="rounded">
+       <li class="forward"><a href="http://startupbootcamp.mit.edu/index.html/" target="_blank">Standard Homepage</a></li>
+       <li class="forward"><a href="http://mobi.mit.edu/map/" target="_blank">Campus Map</a></li>
+       <li class="forward"><a href="http://www.international-lisp-conference.org/2009/cambridge#eat" target="_blank">Places To Eat</a></li>
+     </ul>
+
+      <ul class="individual">
+        <!-- <p> -->
+        <!--   Startup Bootcamp is a free one-day event featuring talks by entrepreneurs and venture capitalists on how to start a company . Hear from founders themselves about the journey of turning an idea into a product. Get the inside scoop on raising money, term sheets, and how to deal with VCs or angel investors. What should you look for when choosing a co-founder, and when should you incorporate or file patents? What can go wrong in a startup, and how does an acquisition work? Have your questions answered by the founders of Reddit, VisiCalc, Zipcar, Dropbox, and more. -->
+        <!-- </p> -->
+
+        <li><a href="mailto:startupbootcamp@mit.edu" target="_blank">Email</a></li>
+        <li><a class="slideup" href="#about">About</a></li>
+      </ul>
+      <div class="info">
+        <p>Add this page to your home screen to view the custom icon, startup screen, and full screen mode.</p>
+      </div>
+    </div>
+  </body>
+</html>
