@@ -1,0 +1,34 @@
+body {
+background-color: #ece8ea;
+}
+
+h1.entry-title {
+display: inline;
+/*width: 170px;
+margin: 9px 780px 9px 10px;*/
+}
+
+#site-title, #category-title, .right, #paginate, .archive-category {
+display: inline;
+}
+
+#top-archive-links {
+width: 500px;
+}
+
+#footer-crown {
+display: none;
+}
+
+#archive #page span {
+display: inline;
+}
+
+#archive h1, #contact h1 {
+display: inline;
+}
+
+blockquote, ul, ol {
+display: inline;
+margin-left: 25px;
+}
