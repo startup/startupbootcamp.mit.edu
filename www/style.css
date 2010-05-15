@@ -7,8 +7,8 @@ padding: 0;
 }
 
 body {
-background-color: #a1a1a1;
-color: #444;
+background-color: #444;
+color: #000;
 font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
 font-size: 11px;
 line-height: 18px;
@@ -20,13 +20,13 @@ position: relative;
 text-align: left;
 margin-right: auto;
 margin-left: auto;
-width: 700px;height: 100%;
+width: 900px;height: 100%;
 }
 
 
 #toptab {
 position: relative;
-width: 700px;height: 30px;
+width: 900px;height: 30px;
 }
 
 
@@ -38,8 +38,8 @@ float: left;
 
 padding: 30px;
 
-width: 700px;
-height: auto;
+width: 900px;
+height: 500px;
 
 -webkit-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 -moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
@@ -106,9 +106,11 @@ font-style: italic;
 
 
 h1 { 
+line-height: 110px; 
+word-spacing: 25px; 
 font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 font-weight: bold;
-font-size: 36pt; 
+font-size: 100pt; 
 
 margin-bottom: 70px;
 }
@@ -186,7 +188,7 @@ float: left;
 padding: 18px 0 0 0;
 height: auto;
 background-color: #1D89D7;
-width: 700px;
+width: 750px;
 -moz-border-radius-bottomleft: 5px;
 -webkit-border-bottom-left-radius: 5px;
 -moz-border-radius-bottomright: 5px;
@@ -219,6 +221,7 @@ padding-top: 20px;
 #legal p {
 text-align: left;
 padding: 0 40px 0 230px;
+color: #a1a1a1;
 }
 
 
