@@ -7,8 +7,8 @@ padding: 0;
 }
 
 body {
-background-color: #98918a;
-color: black;
+background-color: #444;
+color: #000;
 font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
 font-size: 11px;
 line-height: 18px;
@@ -31,35 +31,26 @@ width: 900px;height: 30px;
 
 
 #page {
-background: #FFFFFF url('http://biancacostanzo.com/startupbootcamp/posterLogos.png') top no-repeat;
+background-color: white;
 position: relative;
 
 float: left;
 
 padding: 30px;
 
-width: 800px;
-height: 1100px;
+width: 900px;
+height: 500px;
 
 -webkit-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 -moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 
 
-/*
 -moz-border-radius-topleft: 5px;
 -webkit-border-top-left-radius: 5px;
 -moz-border-radius-topright: 5px;
 -webkit-border-top-right-radius: 5px;
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;
-
--moz-border-radius-bottomleft: 5px;
--webkit-border-top-right-radius: 5px;
--moz-border-radius-bottomright: 5px;
--webkit-border-bottom-right-radius: 5px;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
-*/
 
 
 }
@@ -113,14 +104,13 @@ font-style: italic;
 
 
 h1 { 
-letter-spacing: 0.01px; 
 line-height: 110px; 
+word-spacing: 25px; 
 font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 font-weight: bold;
-font-size: 67pt; 
-text-align: center;
+font-size: 100pt; 
 
-margin-top: 970px;
+margin-bottom: 70px;
 }
 
 h1 a, h1 a:visited {
@@ -222,7 +212,7 @@ text-decoration: underline;
 #legal {
 position: relative;
 float: left;
-width: 800px;
+width: 900px;
 height: auto;
 /* padding-top: 20px; */
 padding: 30px;
