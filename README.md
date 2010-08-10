@@ -6,6 +6,6 @@ http://startupbootcamp.mit.edu
 
 Current editors:
 
-* Michael Grinich (grinch)
+* Michael Grinich (grinich)
 * Bianca Cheng Costanzo (bia)
 * Jeff Dlouhy (jeffd)
