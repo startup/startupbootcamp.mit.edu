@@ -1,19 +1,72 @@
 /* credit to the font styling head-start goes to the extremely useful and 
 well written http://www.alistapart.com/articles/settingtypeontheweb/ */
 
+/*Scrollbar */
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #a9a9a9;
+    -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 3px;
+}
+
+/* @end */
+
+
+
+
 * { 
 margin: 0; 
 padding: 0;
 }
 
+html {
+overflow-y: auto;
+background-color: transparent;
+}
+
 body {
-background-color: #98918a;
+background-color: #939ca8;
 color: black;
 font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
 font-size: 11px;
 line-height: 18px;
 text-align: center;
-min-width: 700px;}
+min-width: 700px;
+/* for scrollbar */
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 10px;
+overflow-y: scroll;
+overflow-x: hidden;
+}
 
 #wrapper {
 position: relative;
@@ -31,15 +84,19 @@ width: 900px;height: 30px;
 
 
 #page {
-background: #FFFFFF url('http://biancacostanzo.com/startupbootcamp/posterLogos.png') top no-repeat;
+padding-left: 0;
+padding-bottom: 0;
+padding-right: 0;
+margin-left: auto;
+margin-bottom: 0px;
+margin-right: auto;
+margin-top: 0px;
+
+background: #FFFFFF url('images/posterLogos.png') top no-repeat;
 position: relative;
 
-float: left;
-
-padding: 30px;
-
-width: 800px;
-height: 1100px;
+width: 730px;
+height: 1000px;
 
 -webkit-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 -moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
@@ -113,14 +170,13 @@ font-style: italic;
 
 
 h1 { 
-letter-spacing: 0.01px; 
+padding-top: 880px; 
+letter-spacing: 0em; 
 line-height: 110px; 
 font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 font-weight: bold;
-font-size: 67pt; 
+font-size: 58pt; 
 text-align: center;
-
-margin-top: 970px;
 }
 
 h1 a, h1 a:visited {
@@ -146,157 +202,15 @@ line-height: 18px;
 }
 
 
-#description {
-position: relative;
-width: 360px;
-height: auto;
-left: 0;
-
-border-bottom-width: 0px;
-border-left-width: 0px;
-border-right-width: 0px;
-border-top-width: 0px;
-color: #2C2C2C;
-font-size: 13px;
-height: 146px;
-line-height: 24px;
-vertical-align: baseline;
-
-}
-
-#engines {
-position: relative;
-float: right;
-width: 200px;
-height: auto;
-left: 0;
-
-margin-bottom: 9px;
-border-bottom: 1px solid #dedede;
-
-padding: 9px;
-
-border: 1px solid #dedede;
-border-style: dotted;
-}
-
-#engines-title {
-
-font-size: 16px;
-color: #666;
-
-}
-
-
-
-
-#footer {
-position: relative;
-float: left;
-padding: 18px 0 0 0;
-height: auto;
-background-color: #1D89D7;
-width: 750px;
--moz-border-radius-bottomleft: 5px;
--webkit-border-bottom-left-radius: 5px;
--moz-border-radius-bottomright: 5px;
--webkit-border-bottom-right-radius: 5px;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
--webkit-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
--moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
-}
-
-
-#footer p {
-margin-left: 230px;
-width: 500px;
-color: white;
-}
-
-#footer a {
-color: white;
-text-decoration: underline;
-}
-
 #legal {
+padding-bottom: 30px;
+padding-top: 30px;
 position: relative;
-float: left;
-width: 800px;
-height: auto;
-/* padding-top: 20px; */
-padding: 30px;
 }
 
 #legal p {
 text-align: center;
-/* padding: 0 40px 0 230px; */
-color: #a1a1a1;
+color: black;
 }
 
 
-
-
-/*Main Nav*/
-
-ul#mainNav {
-	list-style-type:none;
-	
-	background-color: red;
-	padding: 15px;
-	height: auto;
-	
-	position: relative;
-float: right;
-width: 200px;
-left: 0;
-
-}
-
-ul#mainNav li {
-  	height: auto !important;
-  	
-  	text-decoration:none;
-	
-	font-family:Arial Black, Arial, Helvetica, sans-serif;
-	font-size:22pt;
-	line-height:24px;
-
-	color:black;
-	font-weight:bolder;
-	letter-spacing:-2px;
-	height: auto !important;
-	text-transform:uppercase;
-  	
-}
-
-ul#mainNav li .active{
-	color: white;
-	font-size: 100px;
-}
-
-
-
-
-ul#mainNav li a {
-	color: blue;
-}
-
-ul#mainNav li a.book {
-	color:#df3c20;
-	
-}
-
-ul#mainNav li a.book:hover {
-	color:#fac200;
-}
-
-ul#mainNav li a:hover,
-ul#mainNav li a.selected {
-	color:#454340;
-}
-
-ul#mainNav.small {
-	margin-top: -50px;
-	margin-bottom: 10px;
-}
