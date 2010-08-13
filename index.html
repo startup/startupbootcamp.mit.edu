@@ -1,18 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<title>Startup Bootcamp</title>
 
 <head>
+<title>Startup Bootcamp</title>
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 <meta name="Description" content="How to start a company: a free event on September 11, 2010 at MIT." />
 
 <link href="style.css" type="text/css" rel="stylesheet" />
-<!--[if IE 6]>
-<link rel="stylesheet" href="/styles/ie6.css/" media="screen,projection" type="text/css" />
-<![endif]-->
-
-<link rel="stylesheet" type="text/css" media="all" href="/styles/lightview.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <link rel="shortcut icon" href="favicon.gif" />
 </head>
 
@@ -20,36 +16,57 @@
 <body>
 
 <div id="wrapper">
-
-<div id="toptab">
-</div><!--toptab-->
-
-<div id="page">
-
-
-<div id="header">
-
-</div>
-
-
-
-
-
-<h1>Startup Bootcamp</h1>
-
-
-
-</div><!--page-->
-
-
-<div id="legal"><p>&copy; 2009 - 2010 Startup Bootcamp</p></div>
-
+	<div class="flip-container">
+    	<div class="flip-card">
+        	<div class="front face">
+				<h1>Startup Bootcamp</h1>
+         	</div>
+         	<div class="back face">
+            	<form action="http://michaelgrinich.createsend.com/t/r/s/tdkiki/" method="post">
+					<div>
+					<label for="name">Name:</label>
+					<textarea cols=40 rows=2 wrap=virtual name="cm-name" id="name" />
+					</textarea>
+					<br /><br />
+					<label for="tdkiki-tdkiki">Email:</label>
+					<textarea cols=40 rows=2 wrap=virtual name="cm-tdkiki-tdkiki" id="tdkiki-tdkiki" />
+					</textarea>
+					<br /><br />
+					<label for="Student?">Are you a student?</label>
+					<select name="cm-fo-eidx">
+						<option value="92915">Yes</option>
+						<option value="92916">No</option>
+					</select>
+					<br /><br />
+					<label for="School and year">Where and what year?</label>
+					<textarea cols=40 rows=2 wrap=virtual  name="cm-f-eidm" id="Schoolandyear" />
+					</textarea>
+					<br /><br />
+					<label for="Short bio">A couple sentences about yourself and why you want to attend:</label>
+					<textarea cols=40 rows=8 wrap=virtual name="cm-f-eidc" id="Shortbio" />
+					</textarea>
+					<br /><br />
+					<input type="submit" value="Register" />
+					</div>
+				</form>
+        	</div>
+    	</div>
+ 	</div>
+	<div id="cardClick">
+		Register
+	</div>	
+	<div id="legal"><p>&copy; 2009 - 2010 Startup Bootcamp</p></div>
 </div>
 
 </body>
-</html>
-	
-	
-	
-	
+<script>
+$(function(){
+   //card toggle
+   $('#cardClick').toggle(function() {
+   		$("div.flip-container").addClass('active');
+   }, function() {
+     $("div.flip-container").removeClass('active');
+   });
+});
+</script>
 </html>
