@@ -32,7 +32,7 @@
       // Hacking together id for email field
       // Replace the xxxxx below:
       // If your form action were http://mysiteaddress.createsend.com/t/r/s/abcde/, then you'd enter "abcde" below
-      var id = "tdkiki";
+      var id = "uuktut";
       var emailId = id + "-" + id;
       
       // Validate email address with regex
@@ -50,18 +50,24 @@
       var serialized = str + "&action=" + formAction;
       // ]]>
       
+	alert("Serialized" + serialized);
+	
+	
       // Submit the form via ajax
       $.ajax({
         url: "proxy.php",
         type: "POST",
         data: serialized,
         success: function(data){
+			alert("success function");
+	
           // Server-side validation
           if (data.search(/invalid/i) != -1) {
             alert('The email address you supplied is invalid and needs to be fixed before you can subscribe to this list.');
           }
           else
           {
+			alert("successfully submitted");
             $("#theForm").hide(); // If successfully submitted hides the form
             $("#confirmation").slideDown("slow");  // Shows "Thanks for subscribing" div
             $("#confirmation").tabIndex = -1;
@@ -86,33 +92,34 @@
 	<div class="flip-container">
     	<div class="flip-card">
         	<div class="front face">
+								
+				<div id="theForm">
 				
-				<form action="http://michaelgrinich.createsend.com/t/r/s/tdkiki/" method="post">
+				<form action="http://michaelgrinich.createsend.com/t/r/s/uuktut/"  method="post" id="subForm">
 					<div id="cm_form">
 						
 						<div id="leftPostcard">
 							<label for="Short bio">What do you like to make?</label><br/>
-							<textarea cols=40 rows=8 wrap=virtual name="cm-f-eidc" id="Shortbio" /></textarea>
+							<input type="text" name="cm-f-ithktk" id="ShortBio" />
 						</div>
 						
 					
 						<div id="rightPostcard">
 						
+						<input type="text" name="cm-name" id="name" placeholder="name"/>
 						
-		<textarea cols=40 rows=1 wrap=virtual name="cm-name" id="name" placeholder="name"/></textarea>
 							<br /><br />
-		<textarea cols=40 rows=1 wrap=virtual name="cm-tdkiki-tdkiki" id="tdkiki-tdkiki" placeholder="email" /></textarea>
+							
+							<input type="text" name="cm-uuktut-uuktut" id="uuktut-uuktut" placeholder="email"/>
 		
 							<br /><br />
-							<label for="Student?">Are you a student?</label>
-							<select name="cm-fo-eidx">
-								<option value="92915">Yes</option>
-								<option value="92916">No</option>
-							</select>
+							<label for"Student?">Are you a student?:</label><br /><select name="cm-fo-ithktr">
+							<option value="354627">Yes</option>
+							<option value="354628">No</option>
+							</select><br />
+
 							<br /><br />
-							<label for="School and year">Where and what year?</label>
-							<textarea cols=40 rows=2 wrap=virtual  name="cm-f-eidm" id="Schoolandyear" />
-							</textarea>
+							<label for"School And Year">If so, where and what year?</label><br /><input type="text" name="cm-f-ithkty" id="SchoolAndYear" /><br />
 						</div>
 					
 					<br /><br />
@@ -120,8 +127,8 @@
 					
 					</div>
 				</form>
-            	
-			</div>
+            </div>
+
 			<div id="confirmation" style="display: none;">Thanks for subscribing</div>
 			</body>
 			
