@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Startup Bootcamp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta name="Description" content="How to start a company: a free event on September 11, 2010 at MIT." />
+
+<link href="style-simplestupid.css" type="text/css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="shortcut icon" href="favicon.gif" />
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  function checkEmail(email) { 
+    var pattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var emailVal = $("#" + email).val();
+    return pattern.test(emailVal);
+  }
+  $(function() {
+    $("#subForm input:submit").click(function() { 
+      
+      // First, disable the form from submitting
+      $('form#subForm').submit(function() { return false; });
+      
+      // Grab form action
+      var formAction = $("form#subForm").attr("action");
+      
+      // Hacking together id for email field
+      // Replace the xxxxx below:
+      // If your form action were http://mysiteaddress.createsend.com/t/r/s/abcde/, then you'd enter "abcde" below
+      var id = "uuktut";
+      var emailId = id + "-" + id;
+      
+      // Validate email address with regex
+      if (!checkEmail(emailId)) {
+        alert("Please enter a valid email address");
+        return;
+      }
+      
+      // Serialize form values to be submitted with POST
+      var str = $("form#subForm").serialize();
+      
+      // Add form action to end of serialized data
+      // CDATA is used to avoid validation errors
+      //<![CDATA[
+      var serialized = str + "&action=" + formAction;
+      // ]]>
+      	
+	
+      // Submit the form via ajax
+      $.ajax({
+        url: "proxy.php",
+        type: "POST",
+        data: serialized,
+        success: function(data){
+	
+          // Server-side validation
+          if (data.search(/invalid/i) != -1) {
+            alert('The email address you supplied is invalid and needs to be fixed before you can subscribe to this list.');
+          }
+          else
+          {
+			
+			// Flip over if it was successful.
+			$("div.flip-container").addClass('active');
+			
+            // $("#theForm").hide(); // If successfully submitted hides the form
+            // $("#confirmation").slideDown("slow");  // Shows "Thanks for subscribing" div
+            // $("#confirmation").tabIndex = -1;
+            // $("#confirmation").focus(); // For screen reader accessibility
+
+            // Fire off Google Analytics fake pageview
+            //var pageTracker = _gat._getTracker("UA-XXXXX-X");
+            //pageTracker._trackPageview("/newsletter_signup");
+          }
+        }
+      });
+    });
+  });
+</script>
+</head>
+
+
+
+<body>
+
+<div id="wrapper">
+	<div id="page">
+		<h1>Startup Bootcamp</h1>
+    </div>
+    <p>Have an idea? Starting a company is easier than you think.<br/><br/>
+    Startup Bootcamp is a free one-day event featuring talks by entrepreneurs and venture capitalists on how to start a company . Hear from founders themselves about the journey of turning an idea into a product.</p>
+    
+    <div id="form">
+		<form action="http://michaelgrinich.createsend.com/t/r/s/uuktut/"  method="post" id="subForm">
+		<div id="cm_form">
+			
+			<div id="leftPostcard">
+				<label for="Short bio">What do you like to make?</label><br/>							
+				<textarea cols=40 rows=2 wrap=virtual name="cm-f-ithktk" id="ShortBio"/></textarea>
+				
+			</div>
+			
+			<div id="rightPostcard">
+									
+			<textarea cols=40 rows=1 wrap=virtual name="cm-name" id="name" placeholder="name"/></textarea>
+				<br /><br />
+				
+				<textarea cols=40 rows=1 wrap=virtual name="cm-uuktut-uuktut" id="uuktut-uuktut" placeholder="email"/></textarea>
+						
+				<br /><br />
+				<label for"Student?">Are you a student?:</label><br /><select name="cm-fo-ithktr">
+				<option value="354627">Yes</option>
+				<option value="354628">No</option>
+				</select><br />
+
+				<br /><br />
+				<label for"School And Year">If so, where and what year?</label><br />
+				
+				<textarea cols=40 rows=2 wrap=virtual name="cm-f-ithkty" id="SchoolAndYear"/></textarea>
+				
+				
+				<br />
+			</div>
+		
+		<br /><br />
+		<input type="submit" value="Register" />
+		
+		</div>
+		</form>
+    </div>
+	<div id="legal"><p>&copy; 2009 - 2010 Startup Bootcamp</p></div>
+</div>
+
+</body>
+
+</html>
