@@ -129,7 +129,8 @@ font-size: 11px;
 #form {
 	background: url('images/page.png');
 	width: 730px;
-	height: 500px;
+	height: 350px;
+	padding: 30px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 }
@@ -175,14 +176,15 @@ font-size: 11px;
 	margin-top: 50px;
 	float: left;
 	width: 350px;
-	height:500px;
+	height:100%;
 
 }
 
 #rightPostcard
 {
 	float: left;
-	width: 300px;	height: 400px;
+	width: 300px;
+	height: 100%;
 	padding-left:50px;
 }
 
