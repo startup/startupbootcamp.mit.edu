@@ -1,0 +1,299 @@
+
+* { 
+margin: 0; 
+padding: 0;
+}
+
+html {
+	overflow-y: auto;
+	background-color: transparent;
+}
+
+body {
+	font-size: 16px;
+/*	background: url('cardboard.jpg');
+*/	color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	min-width: 700px;
+	/* for scrollbar */
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+#wrapper {
+position: relative;
+text-align: left;
+margin-right: auto;
+margin-left: auto;
+width: 730px;
+height: 1200px;
+
+padding-left: 0;
+padding-bottom: 25px;
+padding-right: 0;
+margin-left: auto;
+margin-bottom: 0px;
+margin-right: auto;
+margin-top: 40px;
+
+background: #FFFFFF ;
+position: relative;
+
+width: 730px;
+height: auto;
+
+text-align: center;
+
+}
+
+
+#wrapper p {
+	padding: 30px 30px 0 30px;
+}
+
+
+#posterLogos
+{
+	padding: 0;
+	margin: 0;
+	background: #FFFFFF;
+	width: 730px;
+	height:900px;
+}
+
+.description
+{
+	text-align:left;
+	padding-bottom:20px;
+}
+
+img {
+border: none;
+}
+
+h1 { 
+padding-top: 0px; 
+letter-spacing: 0em; 
+line-height: 110px; 
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-weight: bold;
+font-size: 58pt; 
+text-align: center;
+}
+
+h2
+{
+	padding-top:20px;
+	letter-spacing: 0em; 
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 36pt; 
+	text-align: center;
+	
+}
+
+
+#legal {
+padding-bottom: 30px;
+padding-top: 30px;
+position: relative;
+}
+
+#legal p {
+text-align: center;
+color: black;
+font-size: 11px;
+}
+
+
+#registration
+{
+	min-height:550px;
+}
+
+/* Register  */
+
+#form {
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	
+}
+
+#cm_form
+{
+	color: #8b8c8c;
+	font-family: Helvetica, sans-serif;
+	font-size: 22px;
+	text-align: left;
+}
+
+
+#cm_form input
+{
+	padding: 5px;
+	width: 100%;
+	
+	color: ##3C3C3C;
+	font-family: Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	
+	background: transparent;
+	
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-style: dashed;
+	border-color: #979797;
+
+}
+
+
+
+#ShortBio
+{
+	margin-top: 20px;
+	width: 100%;
+	height: 130px;
+	padding: 15px;
+	
+	background: transparent;
+	
+	border-width: 1px;
+	border-style: dashed;
+	border-color: #979797;
+	
+	color: ##3C3C3C;
+	font-family: Helvetica, sans-serif;
+	font-size: 22px;
+	
+	text-align: left;
+
+}
+
+#submitButton
+{
+	padding: 5px;
+	margin-top: 50px;
+	color: #3C3C3C;
+	font-family: Helvetica, sans-serif;
+	font-size: 26px;
+	text-align: center;
+		
+	background-color: #F2FFE1;
+	border: 1px solid #83D13D;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #83D13D;
+	border-right-color: #83D13D;
+	border-bottom-color: #83D13D;
+	border-left-color: #83D13D;
+	padding: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 20px;
+	
+/*	-moz-border-radius: 15px;
+	border-radius: 15px;
+*/	
+
+	width:200px;
+	
+	-webkit-animation-name: 'glow';
+	-webkit-animation-duration: .7s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;    
+}
+
+@-webkit-keyframes glow {
+  0% {
+	-webkit-box-shadow: 	rgba(0, 128, 0, 0.66) 0 0px 20px;
+	-moz-box-shadow: 		rgba(0, 128, 0, 0.66) 0 0px 20px;
+  }
+
+
+  100% {
+	-webkit-box-shadow: 	rgba(0, 0, 0, 0.33) 0 0px 0px;
+	-moz-box-shadow: 		rgba(0, 0, 0, 0.33) 0 0px 0px;
+
+  }
+
+}
+
+a 
+{
+	text-decoration: none;
+}
+
+/*#tdkiki-tdkiki, 
+#ShortBio
+{
+	margin-right: 240px;
+	
+	border-left-width: 0px;
+	border-bottom-width: 2px;
+	border-right-width: 0px;
+	border-top-width: 0px;
+	border-color: #979797;
+	border-style: solid;
+	
+	background: transparent;
+	padding: 0px;
+	text-align: left;
+	color: black;
+	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+	width: 400px;
+}*/
+
+
+#successfulPost  {
+	text-align: center;
+	color: black;
+	font-size: 14px;
+	padding : 0;
+	margin : 0;	
+	
+}
+
+#checkmark
+{
+	color: #0B9000;
+	font-family: Helvetica, sans-serif;
+	font-size: 300px;
+	text-align: center;
+	padding-bottom : -30px;
+}
+
+.unsubscribe
+{
+	text-align:center;
+	font-size:11px;
+}
+
+textarea
+{
+   resize: none;
+}
