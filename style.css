@@ -1,6 +1,6 @@
 /*Scrollbar */
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 6px;
     height: 6px;
 }
@@ -29,7 +29,7 @@
     width: 50px;
     background-color: #ccc;
     -webkit-border-radius: 3px;
-}
+}*/
 
 /* @end */
 
@@ -51,8 +51,9 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	text-align: center;
 	min-width: 700px;
+	
 	/* for scrollbar */
-	position: absolute;
+/*	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -61,7 +62,7 @@ body {
 	overflow-x: hidden;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-}
+*/}
 
 
 #wrapper {
