@@ -145,7 +145,10 @@ h2
 #legal {
 padding-bottom: 30px;
 padding-top: 30px;
+width: 334px;
 position: relative;
+margin-left: auto;
+margin-right: auto;
 }
 
 #legal p {
