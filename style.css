@@ -200,6 +200,22 @@ font-size: 11px;
 
 }
 
+#ShortBio_counter
+{
+	padding: none;
+	width: 100%;
+	
+	color: ##3C3C3C;
+	font-family: Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	
+	background: transparent;
+	
+	border : none;
+	
+}
+
 
 
 #ShortBio
