@@ -106,12 +106,12 @@ text-align: left;
 margin-right: auto;
 margin-left: auto;
 width: 730px;
-height: 600px;
+height: 770px;
 }
 
 #infocontainer {
 width: 670px;
-height: 500px;
+height: auto;
 padding: 30px 30px 0 30px;
 }
 
