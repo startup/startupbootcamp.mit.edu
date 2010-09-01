@@ -89,7 +89,6 @@ margin-right: auto;
 margin-top: 40px;
 
 background: #FFFFFF ;
-/*url('images/posterLogos.png') top no-repeat;*/
 position: relative;
 
 width: 730px;
@@ -99,6 +98,47 @@ text-align: center;
 
 -webkit-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 -moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
+}
+
+#speakers {
+position: relative;
+text-align: left;
+margin-right: auto;
+margin-left: auto;
+width: 730px;
+height: 600px;
+}
+
+#infocontainer {
+width: 670px;
+height: 500px;
+padding: 30px 30px 0 30px;
+}
+
+.speakerinfo{
+	width: 167px;
+	height: 230px;
+	display: inline;
+	float: left;
+}
+
+.speakerinfo img{
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+#speakers p{
+	position: relative;
+	margin-left: 10px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	font-size: 14px;
+}
+
+#speakers a{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
 }
 
 
