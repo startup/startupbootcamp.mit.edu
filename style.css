@@ -100,6 +100,16 @@ text-align: center;
 -moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 25px;
 }
 
+#sponsors{
+position: relative;
+text-align: left;
+margin-right: auto;
+margin-left: auto;
+	background: #FFFFFF url('images/sponsordiv.jpg') top no-repeat;
+	width: 730px;
+	height:860px;
+}
+
 #speakers {
 position: relative;
 text-align: left;
