@@ -238,16 +238,15 @@ h3 {
     
 }
 
-#form {
-        
+.card_content {
     font-family: "LoveYaLikeASister", serif;
     font-size: 14pt;
     text-align:left;
-    
     padding-top:30px;
     padding-left:60px;
-    padding-right:60px;
+    padding-right:40px;
     margin-top:46px;
+    
 }
 
 
@@ -290,17 +289,6 @@ h3 {
         
 }
 
-#bolt {
-    width: 45px; height: 93px;
-    background: url("images/bolt.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 50px;    
-}
-
 #submitButton:hover
 { 
   background-position: 0 -51px;
@@ -313,37 +301,30 @@ h3 {
 }
 
 
+#bolt {
+    width: 45px; height: 93px;
+    background: url("images/bolt.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 25px;
+    margin-bottom:25px 
+}
+
 
 #legal {
-padding-bottom: 30px;
-padding-top: 30px;
-width: 334px;
-position: relative;
-margin-left: auto;
-margin-right: auto;
-}
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
-#legal p {
-text-align: center;
-color: black;
-font-size: 11px;
+    font-family: "LoveYaLikeASister", serif;
+    font-size: 10pt;
+    color: black;
+    
 }
 
 
-#successfulPost  {
-	text-align: center;
-	color: black;
-	font-size: 14px;
-	padding : 0;
-	margin : 0;	
-	
-}
-
-#checkmark
-{
-	color: #0B9000;
-	font-family: Helvetica, sans-serif;
-	font-size: 300px;
-	text-align: center;
-	padding-bottom : -30px;
-}
