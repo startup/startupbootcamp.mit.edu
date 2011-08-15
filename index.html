@@ -1,20 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html >
 <head>
 <title>Startup Bootcamp</title>
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
-<meta name="Description" content="How to start a company: a free event on September 11, 2010 at MIT." />
-
+<meta name="Description" content="a free one-day event featuring talks by startup founders | 9:00 a.m. September 24, 2011 at MIT" />
 <link href="style.css" type="text/css" rel="stylesheet" />
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="jquery.counter-1.0.min.js" type="text/javascript" charset="utf-8"></script>
 <link rel="shortcut icon" href="favicon.gif" />
 <script type="text/javascript">
-
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  
   function checkEmail(email) { 
     var pattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     var emailVal = $("#" + email).val();
@@ -22,7 +17,7 @@
   }
 
   $(function() {
-    $("#subForm input:submit").click(function() { 
+    $("#submitButton").click(function() { 
       
       // First, disable the form from submitting
       $('form#subForm').submit(function() { return false; });
@@ -33,16 +28,15 @@
       // Hacking together id for email field
       // Replace the xxxxx below:
       // If your form action were http://mysiteaddress.createsend.com/t/r/s/abcde/, then you'd enter "abcde" below
-      var id = "uuktut";
+      var id = "adyiky";
       var emailId = id + "-" + id;
       
       // Validate email address with regex
       if (!checkEmail(emailId)) {
         alert("Please enter a valid email address");
-        return;
+        return false;
       }
       
-      // Serialize form values to be submitted with POST
       var str = $("form#subForm").serialize();
       
       // Add form action to end of serialized data
@@ -51,7 +45,6 @@
       var serialized = str + "&action=" + formAction;
       // ]]>
       	
-	
       // Submit the form via ajax
       $.ajax({
         url: "proxy.php",
@@ -71,246 +64,128 @@
 	      $("#successfulPost").fadeIn(); 
 	      $("#successfulPost").focus();  
 
-       // Fire off Google Analytics fake pageview
-       //var pageTracker = _gat._getTracker("UA-XXXXX-X");
-       //pageTracker._trackPageview("/newsletter_signup");
           }
         }
       });
     });
   });
 
-
-
-	$(document).ready(function(){
-		$('#354627').hide();
-		$("#successfulPost").hide();
-	
-		$("#student-dropdown").change(function(){
-		
-			if(this.value == '354627')
-				{
-					$("#354627").show();
-			} else {
-				$("#354627").hide();
-			}
-		});
-	
-		$("#student-dropdown").change();
-	});
-
-
-   $(function() {
-        $("#ShortBio").counter({
-            count: 'up',
-            goal: 250
-        });
-			});
-
-
 </script>
 
-<script language="javascript" type="text/javascript">
-function limitText(limitField, limitCount, limitNum) {
-	if (limitField.value.length > limitNum) {
-		limitField.value = limitField.value.substring(0, limitNum);
-	} else {
-		limitCount.value = limitNum - limitField.value.length;
-	}
-}
-</script>
 </head>
-
-
-
 <body>
-
 <div id="wrapper">
-	<div class="page">
-		<!-- <div id="posterLogos"></div> -->
-		<br/>		
-		<div class="description">
-						
-			
-			<h3 style="text-align:center; font-size:32px">Thank you</h3>
+	<h1>Startup Bootcamp</h1> 
+		
+	<h2>a free one-day event featuring talks by startup founders
+	  9:00 a.m. September 24, 2011 at MIT</h2>
 	
-	<p>A huge thanks to our speakers and attendees for making Startup Bootcamp 2010 such a success. Over 1200 people attended in person and our live stream averaged at 1500 viewers (and peaked at 2500!). </p> 
+	<h3 id="thespeakers">the Speakers</h3>
 	
+	<div class="speakers"> 
+	  <div class="polaroid" style="-webkit-transform: rotate(-2deg); -moz-transform: rotate(-2deg);">
+	    <div class="innerImage">
+	      <img src="images/alex_polvi.jpg">
+        Alex Polvi<span class="company"><a href="http://cloudkick.com">Cloudkick</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(3deg); -moz-transform: rotate(3deg);">
+	    <div class="innerImage">
+	      <img src="images/paul_english.jpg">
+        Paul English<span class="company"><a href="http://www.kayak.com">Kayak</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(-1.5deg); -moz-transform: rotate(-1.5deg); margin-left:5px;">
+	    <div class="innerImage">
+	      <img src="images/nathan_blecharczyk.jpg">
+        Nathan Blecharczyk<span class="company"><a href="http://www.airbnb.com">Airbnb</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(.5deg); -moz-transform: rotate(.5deg); margin-left:5px;">
+	    <div class="innerImage">
+	      <img src="images/naveen_selvadurai.jpg">
+        Naveen Selvadurai<span class="company"><a href="http://foursquare.com">Foursquare</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(.5deg); -moz-transform: rotate(.5deg); margin-left:5px;">
+	    <div class="innerImage">
+	      <img src="images/leah_culver.jpg">
+        Leah Culver<span class="company"><a href="http://convore.com/">Convore</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(1.8deg); -moz-transform: rotate(1.8deg); margin-left:5px;">
+	    <div class="innerImage">
+	      <img src="images/drew_houston.jpg">
+        Drew Houston<span class="company"><a href="http://dropbox.com">Dropbox</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(-.8deg); -moz-transform: rotate(-.8deg);">
+	    <div class="innerImage">
+	      <img src="images/patrick_collison.jpg">
+        Patrick Collison <span class="company"><a href="http://www.stripe.com">Stripe</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(2deg); -moz-transform: rotate(2deg); margin-left:2px;">
+	    <div class="innerImage">
+	      <img src="images/adam_dangelo.jpg">
+        Adam D&apos;Angelo<span class="company"><a href="http://www.quora.com">Quora</a></span>
+	    </div>
+	  </div>
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(-2.5deg); -moz-transform: rotate(-2.5deg); margin-left:255px;">
+	    <div class="innerImage">
+	      <img src="images/anthony_volodkin.jpg">
+        Anthony Volodkin<span class="company"><a href="http://www.hypem.com">Hype Machine</a></span>
+	    </div>
+	  </div>	  
+	  
+	  <div class="polaroid" style="-webkit-transform: rotate(.7deg); -moz-transform: rotate(.7deg); margin-left:-2.5px;">
+	    <div class="innerImage">
+	      <img src="images/ed_weissman.jpg">
+        Ed Weissman<span class="company"><a href="http://www.edweissman.com">edw519</a></span>
+	    </div>
+	  </div>
+	      
+	</div> <!-- speakers -->		
 
-		</div>
-		
+  <div id="clear"></div>
 
-		
-		<br/><br/>
-	</div>	<!-- /page -->
-	
-	
-	
-	<div class="page"> 
-		<div id="posterLogos"></div> 
-		
-		<h1>Startup Bootcamp</h1> 
-		
-		<div class="description"> 
-			<p>Have an idea? Starting a company is easier than you think.</p> 
-			<p> 
-			Startup Bootcamp is a free one-day event featuring talks by entrepreneurs and venture capitalists on how to start a company. Hear from founders themselves about the journey of turning the spark of an idea into a viable product. Get the inside scoop on raising money, term sheets, and how to deal with VCs or angel investors. What should you look for when choosing a co-founder, and when should you incorporate or file patents? What can go wrong in a startup, and how does an acquisition work? Have your questions answered by experts and learn key lessons on how to start a company.</p> 
-	
-	
-			<div style="float:right"> 
-			<!-- FB like button --> 
-			<p><br/><iframe src="http://www.facebook.com/plugins/likebox.php?id=141430405869314&amp;width=200&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:62px;" allowTransparency="true"></iframe> 
-			</div></p> 
-			
-			
-			<p><strong>Saturday, September 11, 2010<br/> 
-				9:00 am <br/> 
-				Kresge Auditorium, MIT</strong></p> 
-		</div> 
-		
- 
-		
-		<br/><br/> 
-	</div>	<!-- /page -->
-	
-	
-	<div class="page" id="speakers">
-		<h2>Speakers</h2>
-		<div id="infocontainer">
-			<div class="speakerinfo">
-				<img src="images/speakers/clerico.png" alt="Bill Clerico"/>
-				<p><strong>Bill Clerico</strong></p>
-				<p>Founder, <a href="http://wepay.com/">WePay</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/hale.png" alt="Kevin Hale"/>
-				<p><strong>Kevin Hale</strong></p>
-				<p>Founder, <a href="http://wufoo.com/">WuFoo</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/lindenbaum.png" alt="James Lindenbaum"/>
-				<p><strong>James Lindenbaum</strong></p>
-				<p>Founder, <a href="http://heroku.com/">Heroku</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/mcadoo.jpg" alt="Greg McAdoo"/>
-				<p><a href="http://www.sequoiacap.com/us/greg-mcadoo">Greg McAdoo</a></p>
-				<p>Partner,</p><p><a href="http://sequoiacap.com/">Sequoia Capital</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/metcalfe.jpg" alt="Bob Metcalfe"/>
-				<p><a href="http://en.wikipedia.org/wiki/Robert_Metcalfe">Bob Metcalfe</a></p>
-				<p>Founder, <a href="http://3com.com/">3Com</a></p>
-				<p>Partner, <a href="http://polarisventures.com/">Polaris</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/mountz.jpg" alt="Mick Mountz"/>
-				<p><a href="http://www.kivasystems.com/management-team-kiva-systems.html">Mick Mountz</a></p>
-				<p>Founder,</p><p><a href="http://kivasystems.com/">Kiva Systems</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/wanstrath.jpg" alt="Chris Wanstrath"/>
-				<p><a href="http://chriswanstrath.com/">Chris Wanstrath</a></p>
-				<p>Founder, <a href="http://github.com/">GitHub</a></p>
-			</div>
-			<div class="speakerinfo">
-				<img src="images/speakers/wolfram.jpg" alt="Stephen Wolfram"/>
-				<p><a href="http://www.stephenwolfram.com/">Stephen Wolfram</a></p>
-				<p>Founder,</p><p><a href="http://wolfram.com/">Wolfram Research</a></p>
-			</div>
-
-			<div class="speakerinfo">
-				<img src="images/speakers/davidcancel.jpg" alt="David Cancel"/>
-				<p><a href="http://davidcancel.com/">David Cancel</a></p>
-				<p>Founder,</p><p><a href="http://www.performable.com/">Performable</a></p>
-			</div>
-
-			<div class="speakerinfo">
-				<img src="images/speakers/muir.jpg" alt="Ayr Muir"/>
-				<p><strong>Ayr Muir</strong></p>
-				<p>Founder,</p><p><a href="http://www.cloverfoodlab.com//">Clover Food Lab</a></p>
-			</div>
-			
-			
-			<div class="speakerinfo">
-				<img src="images/speakers/fulop.jpg" alt="Ric Fulop"/>
-				<p><a href="http://www.a123systems.com/a123/company/team/fulop/">Ric Fulop</a></p>
-				<p>Founder,</p><p><a href="http://www.a123systems.com/">A123 Systems</a></p>
-			</div>
-			
-			<div class="speakerinfo">
-				<img src="images/speakers/georgebell.jpg" alt="George Bell"/>
-				<p><strong><a href="http://www.generalcatalyst.com/team/george-bell">George Bell</a></strong></p>
-				<p>Former CEO,</p><p><a href="http://en.wikipedia.org/wiki/Excite/">Excite</a></p>
-			</div>
-		</div>
-		
-	</div>
-		<div class="page" id="sponsors">
-		<h2>Sponsors</h2>
-		</div>
-		
-		
-	<div class="page" id="registration">
-		
-	<h2>Registration</h2>
-    
+  <div id="card">
+    <h3 id="rsvp">R.S.V.P.</h3>
     <div id="form">
-	
-		<form action="http://michaelgrinich.createsend.com/t/r/s/uuktut/"  method="post" id="subForm">
-		
+      <form action="http://startup-club.createsend.com/t/r/s/adyiky/" method="post" id="subForm" name="rsvp_form">
 		<div id="cm_form">
-			<small>Registration is <span style="color:red">closed</span>, but you may fill out the form to be added to our email list.</small>
-			<br/><br/>
-			Name: <input type="text" name="cm-name" id="name">
-			<br/>
-			<br/>
-			Email: <input type="email" name="cm-uuktut-uuktut" id="uuktut-uuktut">
-		
-
-			<br /><br />
-			
-			Are you a student? 
-
-			<select name="cm-fo-ithktr" id="student-dropdown">
-			<option value="354628">No</option>
-			<option value="354627">Yes</option>
-			</select>
-			<br />
-
-			<br /><br />
-							
-			<div id="354627">
-				Where and what year?
-				<input type="text" name="cm-f-ithkty" id="SchoolAndYear"/>			
-				<br /><br />
-			</div>			
-				
-			<label for="Short bio">Why do you want to attend Startup Bootcamp?</label><br/>											
-				<textarea cols=40 rows=2 wrap=virtual name="cm-f-ithktk" id="ShortBio" ></textarea><br>
-				
-				
-		</div> <!--  cm_form	-->
-		
-		<input type="submit" value="Register" id="submitButton"/>
-		
+			<div style="margin-top:8px;">name: <input type="text" name="cm-name" id="name"/></div>
+			<div style="margin-top:10px;">email: <input type="text" name="cm-adyiky-adyiky" id="adyiky-adyiky" /></div>
+		</div> <!--  cm_form	-->		
+		<input type="submit" value="Register" style="display:none;"/>
+		<a href="#" id="submitButton"><span>Submit</span></a>
 		</form>
-    </div>
+  </div> <!-- form -->
+  </div> <!-- card -->
+  
+  
 
-		<div id="successfulPost">
+	<div id="successfulPost">
 			
-			<div id="checkmark">&#10003;</div> <!-- a checkmark -->
-			<p>Thanks. You&#39;re all signed up. We&#39;ll send you a confirmation email soon.</p>
-		</div> <!-- successfulPost -->
+		<div id="checkmark">&#10003;</div> <!-- a checkmark -->
+		<p>Thanks. You&#39;re all signed up. We&#39;ll send you a confirmation email soon.</p>
+	</div> <!-- successfulPost -->
 
-
-</div> <!-- page -->
 
 	<div id="legal">
-		<a href="http://web.mit.edu"><img src="images/logos/mitlong.gif" alt="Massachusetts Institute of Technology"/></a>
-		<p>&copy; 2009 - 2010 Startup Bootcamp</p>
+	  <div id="bolt"></div>
+	  <p style="color:white;">lovingly made in san francisco</p>
 	</div>
-</div>
+	
+</div> <!-- wrapper -->
 
 </body>
 
