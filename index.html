@@ -16,11 +16,6 @@
     return pattern.test(emailVal);
   }
 
-	$(document).ready(function(){
-		$("#successfulPost").hide();
-	});
-
-
   $(function() {
     $("#submitButton").click(function() { 
       
@@ -31,7 +26,7 @@
       
       // Validate email address with regex
       if (!checkEmail(emailId)) {
-        alert("Please enter a valid email address");
+        alert("Please enter a valid email address.");
         return false;
       }
       
@@ -42,30 +37,43 @@
       //<![CDATA[
       var serialized = str + "&action=" + formAction;
       // ]]>
-      					
-      Submit the form via ajax
-      $.ajax({
-        url: "proxy.php",
-        type: "POST",
-        data: serialized,
-        success: function(data){
-       
+      	
+        // 
+        // $("#form").fadeOut();
+        //        $("#successfulPost").fadeIn(); 
+        //        $("#successfulPost").focus();  
+        //        
+	      
+	      $("#form").animate({opacity:0}, function() 
+	      {
+	        $("#form").hide();
+	        $("#successfulPost").fadeIn();
+        });
+        return false;
+				
+      // Submit the form via ajax
+      $.ajax({url: "proxy.php", type: "POST", data: serialized,success: function(data)
+      {
           // Server-side validation
           if (data.search(/invalid/i) != -1) {
-            alert('The email address you supplied is invalid and needs to be fixed before you can subscribe to this list.');
-          } else
-          {
-      	      $("#form").animate({opacity:0}, function() 
-      	      {
-      	        $("#form").hide();
-      	        $("#successfulPost").fadeIn();
-              });
-              return false;
+            alert('Please enter a valid email address.");');
+          } else {
+               // Show thank you slide.
+               $("#subForm").hide();
+               $("#successfulPost").fadeIn(); 
+               $("#successfulPost").focus();  
+               return false;
           }
         }
       });
     });
   });
+  
+  
+  
+	$(document).ready(function(){
+		$("#successfulPost").hide();
+	});
 
 
 </script>
@@ -179,6 +187,8 @@
   </div> <!-- card -->
   
   
+
+
 
 	<div id="legal">
 	  <div id="bolt"></div>
