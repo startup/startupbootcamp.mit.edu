@@ -195,8 +195,15 @@ h3 {
 
 
 @font-face {
-    font-family: "LoveYaLikeASister";
-    src: url("fonts/LoveYaLikeASister.ttf") format("truetype");
+    font-family: 'LoveYaLikeASister';
+    src: url('loveyalikeasister-webfont.eot');
+    src: url('loveyalikeasister-webfont.eot?#iefix') format('embedded-opentype'),
+         url('loveyalikeasister-webfont.woff') format('woff'),
+         url('loveyalikeasister-webfont.ttf') format('truetype'),
+         url('loveyalikeasister-webfont.svg#LoveYaLikeASisterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 .polaroid img {
