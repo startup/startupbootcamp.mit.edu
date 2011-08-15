@@ -16,6 +16,11 @@
     return pattern.test(emailVal);
   }
 
+	$(document).ready(function(){
+		$("#successfulPost").hide();
+	});
+
+
   $(function() {
     $("#submitButton").click(function() { 
       
@@ -61,11 +66,6 @@
       });
     });
   });
-  
-  
-	$(document).ready(function(){
-		$("#successfulPost").hide();
-	});
 
 
 </script>
@@ -179,8 +179,6 @@
   </div> <!-- card -->
   
   
-
-
 
 	<div id="legal">
 	  <div id="bolt"></div>
