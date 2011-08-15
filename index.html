@@ -17,11 +17,14 @@
   }
 
   $(function() {
-    $("#submitButton").click(function(e) { 
-      e.preventDefault();
-            
+    $("#submitButton").click(function() { 
+      
+      // First, disable the form from submitting
+      $('form#subForm').submit(function() { return false; });
+      
       // Grab form action
-      var formAction = this.action;
+      var formAction = $("form#subForm").attr("action");
+            
       
       // Hacking together id for email field
       // Replace the xxxxx below:
@@ -36,7 +39,7 @@
       }
       
       // Serialize form values to be submitted with POST
-      var str = $(this).serialize();
+      var str = $("form#subForm").serialize();
       
       // Add form action to end of serialized data
       // CDATA is used to avoid validation errors
@@ -57,21 +60,20 @@
           }
           else
           {
-            $("#subForm").hide();
+            $("#form").hide();
             $("#successfulPost").fadeIn(); 
             $("#successfulPost").focus();  
-            // return false;
+            return false;
           }
         }
       });
+      return false;
     });
   });
-  
   
 	$(document).ready(function(){
 		$("#successfulPost").hide();
 	});
-
 
 </script>
 
@@ -164,7 +166,7 @@
     <h3 id="rsvp">R.S.V.P.</h3>
     
     <div id="form" class="card_content">
-      <form action="http://startup-club.createsend.com/t/r/s/adyiky/" method="post" id="subForm">
+      <form action="http://startup-club.createsend.com/t/r/s/adyiky/" method="post" id="subForm" name="rsvp_form">
 		<div id="cm_form">
 			<div style="margin-top:8px;">name: <input type="text" name="cm-name" id="name"/></div>
 			<div style="margin-top:10px;">email: <input type="text" name="cm-adyiky-adyiky" id="adyiky-adyiky" /></div>
