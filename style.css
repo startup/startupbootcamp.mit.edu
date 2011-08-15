@@ -195,12 +195,12 @@ h3 {
 
 
 @font-face {
-    font-family: 'LoveYaLikeASister';
-    src: url('loveyalikeasister-webfont.eot');
-    src: url('loveyalikeasister-webfont.eot?#iefix') format('embedded-opentype'),
-         url('loveyalikeasister-webfont.woff') format('woff'),
-         url('loveyalikeasister-webfont.ttf') format('truetype'),
-         url('loveyalikeasister-webfont.svg#LoveYaLikeASisterRegular') format('svg');
+    font-family: "LoveYaLikeASister";
+    src: url('fonts/loveyalikeasister-webfont.eot');
+    src: url('fonts/loveyalikeasister-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/loveyalikeasister-webfont.woff') format('woff'),
+         url('fonts/loveyalikeasister-webfont.ttf') format('truetype'),
+         url('fonts/loveyalikeasister-webfont.svg#LoveYaLikeASisterRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
