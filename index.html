@@ -17,58 +17,56 @@
   }
 
   $(function() {
-    $("#submitButton").click(function() { 
+    $("#submitButton").click(function(e) { 
+      e.preventDefault();
+            
+      // Grab form action
+      var formAction = this.action;
       
-      $('form#subForm').submit(function() { return false; });
-      var formAction = $("form#subForm").attr("action");
+      // Hacking together id for email field
+      // Replace the xxxxx below:
+      // If your form action were http://mysiteaddress.createsend.com/t/r/s/abcde/, then you'd enter "abcde" below
       var id = "adyiky";
       var emailId = id + "-" + id;
       
       // Validate email address with regex
       if (!checkEmail(emailId)) {
-        alert("Please enter a valid email address.");
-        return false;
+        alert("Please enter a valid email address");
+        return;
       }
       
-      var str = $("form#subForm").serialize();
+      // Serialize form values to be submitted with POST
+      var str = $(this).serialize();
       
       // Add form action to end of serialized data
       // CDATA is used to avoid validation errors
       //<![CDATA[
       var serialized = str + "&action=" + formAction;
       // ]]>
-      	
-        // 
-        // $("#form").fadeOut();
-        //        $("#successfulPost").fadeIn(); 
-        //        $("#successfulPost").focus();  
-        //        
-	      
-	      $("#form").animate({opacity:0}, function() 
-	      {
-	        $("#form").hide();
-	        $("#successfulPost").fadeIn();
-        });
-        return false;
-				
+      
       // Submit the form via ajax
-      $.ajax({url: "proxy.php", type: "POST", data: serialized,success: function(data)
-      {
+      $.ajax({
+        url: "proxy.php",
+        type: "POST",
+        data: serialized,
+        dataType: 'html',
+        success: function(data){
           // Server-side validation
           if (data.search(/invalid/i) != -1) {
-            alert('Please enter a valid email address.");');
-          } else {
-               // Show thank you slide.
-               $("#subForm").hide();
-               $("#successfulPost").fadeIn(); 
-               $("#successfulPost").focus();  
-               return false;
+            alert('Please enter a valid email address');
+          }
+          else
+          {
+            $("#subForm").hide();
+            $("#successfulPost").fadeIn(); 
+            $("#successfulPost").focus();  
+            return false;
           }
         }
       });
     });
   });
-  
+
   
   
 	$(document).ready(function(){
