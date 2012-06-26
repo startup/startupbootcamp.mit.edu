@@ -97,7 +97,7 @@ h1 {
     background-position: center center;
 }
 
-h2 {
+.header2011 {
     margin-left:auto;
     margin-right:auto;
     margin-top: 50px;
@@ -109,6 +109,20 @@ h2 {
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+h2 {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: "LoveYaLikeASister", serif;
+    color: white;
+    font-size: 16pt;
+}
+
+h2 a, h2 a:visited, h2 a:hover {
+    color: white;
 }
 
 h3 {
