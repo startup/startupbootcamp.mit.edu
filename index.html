@@ -9,72 +9,39 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <link rel="shortcut icon" href="favicon.gif" />
 <script type="text/javascript">
-  
-  function checkEmail(email) { 
-    var pattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    var emailVal = $("#" + email).val();  
-    return pattern.test(emailVal);
-  }
+  $(function () {
+      $("form#subForm").submit(function (event) {
+          event.preventDefault();
+          // Grab form action
+          var email = $("#email").val();
 
-  $(function() {
-    $("#submitButton").click(function() { 
-      
-      // First, disable the form from submitting
-      $('form#subForm').submit(function() { return false; });
-      
-      // Grab form action
-      var formAction = $("form#subForm").attr("action");
-            
-      
-      // Hacking together id for email field
-      // Replace the xxxxx below:
-      // If your form action were http://mysiteaddress.createsend.com/t/r/s/abcde/, then you'd enter "abcde" below
-      var id = "adyiky";
-      var emailId = id + "-" + id;
-      
-      // Validate email address with regex
-      if (!checkEmail(emailId)) {
-        alert("Please enter a valid email address");
-        return;
-      }
-      
-      // Serialize form values to be submitted with POST
-      var str = $("form#subForm").serialize();
-      
-      // Add form action to end of serialized data
-      // CDATA is used to avoid validation errors
-      //<![CDATA[
-      var serialized = str + "&action=" + formAction;
-      // ]]>
-      
-      // Submit the form via ajax
-      $.ajax({
-        url: "proxy.php",
-        type: "POST",
-        data: serialized,
-        dataType: 'html',
-        success: function(data){
-          // Server-side validation
-          if (data.search(/invalid/i) != -1) {
-            alert('Please enter a valid email address');
-          }
-          else
-          {
-            $("#form").hide();
-            $("#successfulPost").fadeIn(); 
-            $("#successfulPost").focus();  
-            return false;
-          }
-        }
+          // Submit the form via ajax
+          $.ajax({
+              url: "listSubscribe.php",
+              type: "POST",
+              data: {
+                  email: email
+              },
+              dataType: 'html',
+              success: function (data) {
+                  // Server-side validation
+                  if (data.search(/error/i) != -1) {
+                      alert('Please enter a valid email address');
+                  } else {
+                      $("#form").hide();
+                      $("#successfulPost").fadeIn();
+                      $("#successfulPost").focus();
+                      return false;
+                  }
+              }
+          });
+          return false;
       });
-      return false;
-    });
   });
-  
-	$(document).ready(function(){
-    $("#successfulPost").hide();
-	});
 
+  $(document).ready(function () {
+      $("#successfulPost").hide();
+  });
 </script>
 
 </head>
@@ -99,9 +66,9 @@
     
     
     <div id="form" class="card_content">
-      <form action="http://startup-club.createsend.com/t/r/s/adyiky/" method="post" id="subForm" name="rsvp_form">
+      <form id="subForm" name="rsvp_form">
 		<div id="cm_form">
-			<div style="margin-top:10px;">email: <input type="text" name="cm-adyiky-adyiky" id="adyiky-adyiky" /></div>
+			<div style="margin-top:10px;">email: <input type="text" id="email"/></div>
 		</div> <!--  cm_form	-->		
 		<input type="submit" value="Register" style="display:none;"/>
 		<a href="#" id="submitButton"><span>Submit</span></a>
@@ -113,9 +80,10 @@
     <div style="margin-top:10px;">Thanks. You&#39;re all signed up.</div>
 		<div style="margin-top:18px;">We&#39;ll send you more details soon.</div>
 	  
+    <!--
   <div id="tweet_this" style="margin-top:20px">
     <span style=" font-size: 10pt;">tweet that you&apos;re going &rarr;</span>
-    <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
     <div style="display:inline;">
        <a href="https://twitter.com/share" class="twitter-share-button"
           data-url="http://startupbootcamp.mit.edu"
@@ -123,7 +91,8 @@
           data-related="StartupBootcamp:Startup Bootcamp"
           data-count="horizontal">Tweet</a>
     </div>
-    </div><!-- tweet_this -->
+    </div>
+    -->
     
 	</div> <!-- successfulPost -->
 	
