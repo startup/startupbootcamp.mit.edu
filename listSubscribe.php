@@ -1,6 +1,12 @@
 <?php
 require_once 'inc/MCAPI.class.php';
-require_once 'inc/config.inc.php'; //contains apikey
+
+//API Key - see http://admin.mailchimp.com/account/api
+$apikey = 'd77452eaea2024d53be11788202045d3-us4';
+
+// A List Id to run examples against. use lists() to view all
+// Also, login to MC account, go to List, then List Tools, and look for the List ID entry
+$listId = '65e8f01b03';
 
 $api = new MCAPI($apikey);
 
