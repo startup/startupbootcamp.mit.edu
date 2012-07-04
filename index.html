@@ -3,28 +3,32 @@
 <head>
 <title>Startup Bootcamp</title>
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
-<meta name="Description" content="a free one-day event featuring talks by startup founders | todo time, date, location" />
+<meta name="Description" content="a free one-day event featuring talks by startup founders | 8:00 a.m. October 8, 2012 at MIT" />
 <link href="style.css" type="text/css" rel="stylesheet" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <link rel="shortcut icon" href="favicon.gif" />
 <script type="text/javascript">
   $(function () {
-      $("form#subForm").submit(function (event) {
+        var submitForm = function (event) {
           event.preventDefault();
           // Grab form action
           var email = $("#email").val();
+          var name = $("#name").val();
 
           // Submit the form via ajax
           $.ajax({
               url: "listSubscribe.php",
               type: "POST",
               data: {
-                  email: email
+                  email: email,
+                  name: name
               },
               dataType: 'html',
               success: function (data) {
                   // Server-side validation
+                  $('#email').val('');
+                  $('#name').val('');
                   if (data.search(/error/i) != -1) {
                       alert('Please enter a valid email address');
                   } else {
@@ -36,7 +40,9 @@
               }
           });
           return false;
-      });
+      }
+        $("form#subForm").submit(submitForm);
+        $('#submitButton').click(submitForm);
   });
 
   $(document).ready(function () {
@@ -49,8 +55,8 @@
 <div id="wrapper">
 	<h1>Startup Bootcamp</h1> 
 				
-	<h2>a free one-day event featuring talks by startup founders
-	  todo time, date, location</h2>
+    <h2>a free one-day event featuring talks by startup founders<br>
+        8:00 a.m. October 8, 2012 at MIT</h2>
 
     <h2>Check out last year's <a href="2011.html">lineup</a></h2>
 	  
@@ -62,16 +68,14 @@
   <div id="card">
     <h3 id="rsvp">R.S.V.P.</h3>
     
-
-    
-    
     <div id="form" class="card_content">
       <form id="subForm" name="rsvp_form">
-		<div id="cm_form">
+          <div id="cm_form">
+			<div style="margin-top:0px;">name: <input type="text" id="name"/></div>
 			<div style="margin-top:10px;">email: <input type="text" id="email"/></div>
 		</div> <!--  cm_form	-->		
-		<input type="submit" value="Register" style="display:none;"/>
 		<a href="#" id="submitButton"><span>Submit</span></a>
+		<input type="submit" value="Register" style="visibility:hidden;"/>
 		</form>
   </div> <!-- form -->
   
