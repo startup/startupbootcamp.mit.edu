@@ -114,15 +114,15 @@ h1 {
 h2 {
     margin-left:auto;
     margin-right:auto;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-family: "LoveYaLikeASister", serif;
     color: white;
     font-size: 16pt;
 }
 
 h2 a, h2 a:visited, h2 a:hover {
-    color: white;
+    color: #FFF38D;
 }
 
 h3 {
