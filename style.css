@@ -392,3 +392,13 @@ h3 {
 }
 
 
+#sponsors img {
+    height: 96px;
+}
+
+#sponsors {
+    margin-top: 20px;
+    color: white;
+    font-size: 14pt;
+    font-family: "LoveYaLikeASister", serif;
+}
