@@ -114,11 +114,15 @@ h1 {
 h2 {
     margin-left:auto;
     margin-right:auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-family: "LoveYaLikeASister", serif;
     color: white;
     font-size: 16pt;
+}
+
+#header-links {
+  margin-top: 30px;
 }
 
 h2 a, h2 a:visited, h2 a:hover {
@@ -186,7 +190,7 @@ h3 {
     -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0 5px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.33) 0 5px 5px;
     padding:25px;
-    margin:0 auto;
+    margin:0 auto 20px auto;
     
     font-family: "LoveYaLikeASister", serif;
     font-size: 14pt;
