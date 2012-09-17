@@ -19,7 +19,10 @@ $mergeVars = array('FNAME'=> $name);
 
 $retval = $api->listSubscribe( $listId, $email, $mergeVars);
 
-if ($api->errorCode) {
+if (intval($api->errorCode) == 214) { // list already subscribed
+    echo "\tCode=".$api->errorCode."\n";
+    echo "\tMsg=".$api->errorMessage."\n";
+} else if ($api->errorCode) {
     echo "Error";
     echo "Unable to load listSubscribe()!\n";
     echo "\tCode=".$api->errorCode."\n";
